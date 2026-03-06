@@ -1,0 +1,220 @@
+.game-container {
+  min-height: 100vh;
+  padding: 100px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-card {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(26, 31, 58, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--accent-red);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(200, 16, 46, 0.3);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.game-header h1 {
+  font-size: 42px;
+  color: var(--accent-red);
+  margin-bottom: 10px;
+  letter-spacing: 6px;
+  text-shadow: 0 0 30px rgba(200, 16, 46, 0.4);
+}
+
+.game-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.score-item {
+  text-align: center;
+}
+
+.score-label {
+  display: block;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.score-value {
+  display: block;
+  font-size: 32px;
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.game-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn-play {
+  flex: 2;
+  padding: 18px;
+  background: linear-gradient(135deg, var(--accent-red), #ff4757);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(200, 16, 46, 0.4);
+}
+
+.btn-play:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(200, 16, 46, 0.6);
+}
+
+.btn-play:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-reset {
+  flex: 1;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-reset:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent-gold);
+}
+
+.game-message {
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  animation: fadeIn 0.3s ease-out;
+  letter-spacing: 1px;
+}
+
+.game-message.correct {
+  background: rgba(76, 209, 55, 0.2);
+  border: 2px solid #4cd137;
+  color: #4cd137;
+}
+
+.game-message.incorrect {
+  background: rgba(200, 16, 46, 0.2);
+  border: 2px solid var(--accent-red);
+  color: #ff6b6b;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.note-button {
+  padding: 25px 15px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 2px solid var(--accent-gold);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.note-button:hover:not(:disabled) {
+  background: rgba(212, 175, 55, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.note-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.note-name {
+  font-size: 18px;
+  color: var(--accent-gold);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.note-symbol {
+  font-size: 24px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.game-instructions {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.game-instructions h3 {
+  color: var(--accent-gold);
+  margin-bottom: 15px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.game-instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.game-instructions li {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.game-instructions li::before {
+  content: '♪';
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+  font-size: 16px;
+}
+
