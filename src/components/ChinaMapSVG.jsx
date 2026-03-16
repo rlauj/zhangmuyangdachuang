@@ -326,3 +326,7 @@ const ChinaMapSVG = ({ onProvinceClick, onProvinceDoubleClick, currentPlaying })
 
 export default ChinaMapSVG
 
+
+
+
+

@@ -27,6 +27,10 @@ const MainMap = ({ user, onLogout }) => {
     navigate('/game')
   }
 
+  const handleNewsClick = () => {
+    navigate('/news')
+  }
+
   return (
     <div>
       <header className="header">
@@ -75,10 +79,18 @@ const MainMap = ({ user, onLogout }) => {
         <button onClick={handleGameClick} className="game-button">
           🎵 听音游戏
         </button>
+
+        <button onClick={handleNewsClick} className="news-button">
+          📰 琴韵要闻
+        </button>
       </div>
     </div>
   )
 }
 
 export default MainMap
+
+
+
+
 
