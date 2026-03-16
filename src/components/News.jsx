@@ -247,3 +247,4 @@ const News = ({ user, onLogout }) => {
 
 export default News
 
+
