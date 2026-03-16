@@ -31,6 +31,10 @@ const MainMap = ({ user, onLogout }) => {
     navigate('/news')
   }
 
+  const handleTrendingClick = () => {
+    navigate('/trending')
+  }
+
   return (
     <div>
       <header className="header">
@@ -82,6 +86,10 @@ const MainMap = ({ user, onLogout }) => {
 
         <button onClick={handleNewsClick} className="news-button">
           📰 琴韵要闻
+        </button>
+
+        <button onClick={handleTrendingClick} className="trending-button">
+          🔥 今日头条
         </button>
       </div>
     </div>

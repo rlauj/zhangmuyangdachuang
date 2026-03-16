@@ -5,6 +5,7 @@ import MainMap from './components/MainMap'
 import ProvinceDetail from './components/ProvinceDetail'
 import MusicGame from './components/MusicGame'
 import News from './components/News'
+import Trending from './components/Trending'
 import './App.css'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/province/:id" element={<ProvinceDetail user={user} onLogout={handleLogout} />} />
           <Route path="/game" element={<MusicGame user={user} onLogout={handleLogout} />} />
           <Route path="/news" element={<News user={user} onLogout={handleLogout} />} />
+          <Route path="/trending" element={<Trending user={user} onLogout={handleLogout} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>

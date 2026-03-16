@@ -5,3 +5,6 @@ dist/
 .git/
 git-setup.bat
 
+*.bat 
+node_modules/ 
+dist/ 
